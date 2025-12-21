@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marigold Grow Transformation | Rakesh Gupta</title>
+    <meta name="description" content="Transformed Marigold Grow from enterprise services-heavy product to modern self-serve PLG platform. 50% churn reduction, 20% ARR growth, $650K new revenue.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="../css/style.css">
+    
+    <style>
+        /* Case Study Specific Styles */
+        .case-study-hero {
+            padding: 120px 0 60px;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .case-study-header {
+            max-width: 900px;
+        }
+        
+        .case-study-meta {
+            display: flex;
+            gap: 3rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .meta-item {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        
+        .meta-label {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-muted);
+        }
+        
+        .meta-value {
+            font-size: 1.1rem;
+            color: var(--text);
+            font-weight: 500;
+        }
+        
+        .case-study-title {
+            font-family: var(--font-display);
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.02em;
+        }
+        
+        .case-study-intro {
+            font-size: 1.3rem;
+            line-height: 1.6;
+            color: var(--text-muted);
+            max-width: 800px;
+            margin-bottom: 3rem;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            padding: 3rem;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            margin: 4rem 0;
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-family: var(--font-display);
+            font-size: 3rem;
+            color: var(--accent);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-description {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+        
+        .content-section {
+            max-width: 900px;
+            margin: 0 auto 4rem;
+        }
+        
+        .content-section h2 {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.01em;
+        }
+        
+        .content-section h3 {
+            font-size: 1.5rem;
+            margin: 2.5rem 0 1rem;
+            font-weight: 500;
+        }
+        
+        .content-section p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+        }
+        
+        .content-section ul {
+            list-style: none;
+            padding-left: 0;
+            margin: 1.5rem 0;
+        }
+        
+        .content-section li {
+            padding-left: 2rem;
+            margin-bottom: 1rem;
+            position: relative;
+            line-height: 1.7;
+            color: var(--text-muted);
+        }
+        
+        .content-section li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+        
+        .highlight-box {
+            background: var(--card-bg);
+            border-left: 3px solid var(--accent);
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .highlight-box p {
+            margin-bottom: 0;
+        }
+        
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .comparison-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            padding: 2rem;
+        }
+        
+        .comparison-card h4 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: var(--text);
+        }
+        
+        .comparison-card.before h4 {
+            color: #e74c3c;
+        }
+        
+        .comparison-card.after h4 {
+            color: var(--accent);
+        }
+        
+        .transformation-cards {
+            display: grid;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .transformation-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            padding: 2rem;
+        }
+        
+        .transformation-number {
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+        
+        .transformation-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            margin-bottom: 2rem;
+            transition: color 0.3s ease;
+        }
+        
+        .back-link:hover {
+            color: var(--accent);
+        }
+        
+        @media (max-width: 768px) {
+            .comparison-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <a href="/" class="logo">Rakesh Gupta</a>
+            <ul>
+                <li><a href="/#work">Work</a></li>
+                <li><a href="/#expertise">Expertise</a></li>
+                <li><a href="/#testimonials">Testimonials</a></li>
+                <li><a href="/#thinking">Thinking</a></li>
+                <li><a href="/#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- Case Study Hero -->
+    <section class="case-study-hero">
+        <div class="container">
+            <a href="/#work" class="back-link">← Back to Work</a>
+            
+            <div class="case-study-header">
+                <div class="case-study-meta">
+                    <div class="meta-item">
+                        <span class="meta-label">Company</span>
+                        <span class="meta-value">Marigold (Zeta Global)</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Role</span>
+                        <span class="meta-value">Senior Product Manager</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Timeline</span>
+                        <span class="meta-value">2022 - 2024</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Focus</span>
+                        <span class="meta-value">PLG · Growth</span>
+                    </div>
+                </div>
+                
+                <h1 class="case-study-title">Marigold Grow: Transforming Enterprise Product into Modern PLG Platform</h1>
+                
+                <p class="case-study-intro">
+                    Led complete product transformation of Marigold Grow (formerly Cheetah Experiences)—from legacy, 
+                    services-heavy enterprise tool to modern self-serve platform. Recognized market shift toward PLG, 
+                    challenged long-held assumptions about enterprise complexity, and delivered 50% churn reduction with 
+                    20% ARR growth.
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Impact Stats -->
+    <section class="section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number">50%</span>
+                    <span class="stat-description">Churn reduction</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">+20%</span>
+                    <span class="stat-description">ARR growth</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">$650K</span>
+                    <span class="stat-description">New ARR from cross-sell</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">PLG</span>
+                    <span class="stat-description">Services → Self-serve</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- The Challenge -->
+    <section class="section">
+        <div class="container">
+            <div class="content-section">
+                <h2>The Challenge: Recognizing the Market Shift</h2>
+                
+                <p>
+                    When I joined Marigold (acquired by Zeta Global in 2024), Grow was still operating as 
+                    <strong>Cheetah Experiences</strong>—an enterprise product built for a different era.
+                </p>
+                
+                <div class="comparison-grid">
+                    <div class="comparison-card before">
+                        <h4>❌ The Legacy Approach</h4>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="padding-left: 0; margin-bottom: 0.75rem;">• Engineering-led, built without product strategy</li>
+                            <li style="padding-left: 0; margin-bottom: 0.75rem;">• Expert-only UX designed for professional services teams</li>
+                            <li style="padding-left: 0; margin-bottom: 0.75rem;">• Sales-led with custom work for each client campaign</li>
+                            <li style="padding-left: 0; margin-bottom: 0.75rem;">• Required solution consultants to operate</li>
+                            <li style="padding-left: 0; margin-bottom: 0.75rem;">• Long implementation cycles</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="comparison-card after">
+                        <h4>✅ The Market Reality</h4>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="padding-left: 0; margin-bottom: 0.75rem;">• Modern competitors: Typeform, Wyng, Jebbit, DigiOH, Braze</li>
+                            <li style="padding-left: 0; margin-bottom: 0.75rem;">• Self-serve, product-led approach winning</li>
+                            <li style="padding-left: 0; margin-bottom: 0.75rem;">• Customer behavior changed: time & attention premium</li>
+                            <li style="padding-left: 0; margin-bottom: 0.75rem;">• Quick, simple experiences expected</li>
+                            <li style="padding-left: 0; margin-bottom: 0.75rem;">• SMB market growing faster than enterprise</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <h3>The Critical Insight</h3>
+                
+                <p>
+                    The industry held a long-standing belief: <strong>enterprise customers need comprehensive functionality 
+                    and deep, complex features.</strong> This drove product decisions for years.
+                </p>
+                
+                <div class="highlight-box">
+                    <p>
+                        <strong>I challenged this assumption.</strong> The market had shifted. Even enterprise customers wanted 
+                        simple, fast, self-serve tools. The choice wasn't between power and simplicity—it was possible to deliver 
+                        both through better product design and PLG principles.
+                    </p>
+                </div>
+                
+                <p>
+                    I was responsible for Grow end-to-end: discovery, strategy, development, and enablement. I interacted directly 
+                    with enterprise customers, delivered webinars, and ran deep-dive sessions internally and externally. This gave 
+                    me clear evidence that transformation was necessary—and possible.
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- The Transformation -->
+    <section class="section">
+        <div class="container">
+            <div class="content-section">
+                <h2>The Transformation: Five Strategic Shifts</h2>
+                
+                <p>
+                    I led a complete product transformation, rebuilding Grow from a services-dependent enterprise tool 
+                    into a modern, self-serve platform that could compete with PLG-native competitors.
+                </p>
+                
+                <div class="transformation-cards">
+                    <div class="transformation-card">
+                        <div class="transformation-number">1</div>
+                        <div class="transformation-title">Self-Serve Platform</div>
+                        <p style="color: var(--text-muted); margin: 0;">
+                            Introduced inline guidance, product tours, contextual tooltips, and progressive disclosure. 
+                            Users could now create campaigns without professional services support. Added onboarding flows 
+                            and activation guides to accelerate time-to-value.
+                        </p>
+                    </div>
+                    
+                    <div class="transformation-card">
+                        <div class="transformation-number">2</div>
+                        <div class="transformation-title">Out-of-the-Box Experiences</div>
+                        <p style="color: var(--text-muted); margin: 0;">
+                            Created pre-built templates and "NextGen Experiences"—ready-to-use quizzes, contests, forms, 
+                            and interactive content. Users could launch campaigns in minutes instead of weeks. Introduced 
+                            self-serve apps and games that required zero custom development.
+                        </p>
+                    </div>
+                    
+                    <div class="transformation-card">
+                        <div class="transformation-number">3</div>
+                        <div class="transformation-title">Drag-and-Drop Editor</div>
+                        <p style="color: var(--text-muted); margin: 0;">
+                            Built a real-time visual editor with drag-and-drop interface, replacing the expert-only approach. 
+                            Non-technical marketers could now design experiences themselves. Added wizards for common workflows 
+                            to guide users through complex tasks simply.
+                        </p>
+                    </div>
+                    
+                    <div class="transformation-card">
+                        <div class="transformation-number">4</div>
+                        <div class="transformation-title">GUI-Based Data Integrations</div>
+                        <p style="color: var(--text-muted); margin: 0;">
+                            Transformed data integrations from code-based to self-service GUI configuration. Users could 
+                            connect their marketing platforms, CRMs, and data sources without technical support. Built 
+                            two-way sync with email marketing products for personalized journeys and profile enrichment.
+                        </p>
+                    </div>
+                    
+                    <div class="transformation-card">
+                        <div class="transformation-number">5</div>
+                        <div class="transformation-title">Cross-Platform Integration</div>
+                        <p style="color: var(--text-muted); margin: 0;">
+                            Integrated Grow with Marigold's broader stack—Engage, Engage+, and Sailthru—creating unified 
+                            customer journeys. This enabled cross-sell into SMB market and provided enterprise customers 
+                            with relationship marketing capabilities across the full customer lifecycle.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Modern Capabilities -->
+    <section class="section">
+        <div class="container">
+            <div class="content-section">
+                <h2>Modern Capabilities: AI, Personalization & Self-Service</h2>
+                
+                <p>
+                    Beyond the core platform transformation, I introduced modern capabilities that made Grow competitive 
+                    with PLG-native products while maintaining enterprise power:
+                </p>
+                
+                <h3>AI & Content Tools</h3>
+                <ul>
+                    <li><strong>AI content writer:</strong> Generate form copy, quiz questions, and campaign messaging automatically</li>
+                    <li><strong>Pexels integration:</strong> Access millions of stock images directly in the editor</li>
+                    <li><strong>Built-in translator:</strong> Multi-language support without external tools</li>
+                </ul>
+                
+                <h3>Personalization & Dynamic Content</h3>
+                <ul>
+                    <li><strong>Dynamic content blocks:</strong> Show different content based on user attributes or behavior</li>
+                    <li><strong>Tokens and merge fields:</strong> Personalize experiences with customer data</li>
+                    <li><strong>Branching logic:</strong> Create adaptive journeys based on user responses</li>
+                    <li><strong>"Remember me" functionality:</strong> Persistent user state across sessions</li>
+                    <li><strong>Journey orchestration:</strong> Multi-step experiences connected to email marketing campaigns</li>
+                </ul>
+                
+                <h3>Developer & Enterprise Features</h3>
+                <ul>
+                    <li><strong>Third-party tool integrations:</strong> Cloudflare for performance, analytics platforms, CRMs</li>
+                    <li><strong>Customer data sync:</strong> Two-way integration with marketing platforms for profile enrichment</li>
+                    <li><strong>AWS cloud migration:</strong> Improved resilience, privacy compliance, cost efficiency</li>
+                    <li><strong>Infrastructure upgrades:</strong> Better performance, security, and scalability</li>
+                </ul>
+                
+                <h3>Help & Enablement</h3>
+                <ul>
+                    <li><strong>Redesigned Help Center:</strong> Simple, friendly documentation replacing technical manuals</li>
+                    <li><strong>Product tours:</strong> Interactive walkthroughs for new users</li>
+                    <li><strong>Contextual guides:</strong> Just-in-time help within the product</li>
+                    <li><strong>Onboarding flows:</strong> Structured activation paths for different user types</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+    <!-- GTM & Market Expansion -->
+    <section class="section">
+        <div class="container">
+            <div class="content-section">
+                <h2>Go-to-Market & Revenue Growth</h2>
+                
+                <p>
+                    The transformation wasn't just about product—it required rethinking our market positioning and 
+                    sales approach.
+                </p>
+                
+                <h3>Opening New Markets</h3>
+                <ul>
+                    <li><strong>SMB expansion:</strong> Self-serve capabilities made Grow viable for smaller companies</li>
+                    <li><strong>Cross-sell into Marigold platforms:</strong> Integrated with Engage, Engage+, Sailthru</li>
+                    <li><strong>$650K new ARR:</strong> Generated from platform cross-sell and market expansion</li>
+                    <li><strong>Competitive positioning:</strong> Could now compete directly with Typeform, Wyng, Jebbit, DigiOH</li>
+                </ul>
+                
+                <h3>Internal & External Promotion</h3>
+                <ul>
+                    <li>Led webinars showcasing new self-serve capabilities</li>
+                    <li>Created product collateral and demo materials</li>
+                    <li>Ran internal forums to drive awareness and alignment</li>
+                    <li>Delivered customer success enablement and training</li>
+                    <li>Developed GTM strategy with marketing and sales</li>
+                </ul>
+                
+                <h3>Customer Success & Retention</h3>
+                <ul>
+                    <li><strong>50% churn reduction</strong> through better activation and onboarding</li>
+                    <li>Proactive account reviews identifying expansion opportunities</li>
+                    <li>Tailored onboarding paths based on customer segment and use case</li>
+                    <li>Success enablement resources and best practices library</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Impact & Validation -->
+    <section class="section">
+        <div class="container">
+            <div class="content-section">
+                <h2>Impact: The Strategy Worked</h2>
+                
+                <h3>Quantitative Results</h3>
+                <ul>
+                    <li><strong>+20% ARR growth:</strong> Major innovations (NextGen Experiences, self-serve apps, games, editor, wizards) drove revenue expansion</li>
+                    <li><strong>50% churn reduction:</strong> Better onboarding, activation, and customer success</li>
+                    <li><strong>$650K new ARR:</strong> Cross-sell into Engage, Engage+, Sailthru platforms</li>
+                    <li><strong>Faster activation:</strong> Time to first campaign reduced from weeks to hours</li>
+                    <li><strong>Reduced support burden:</strong> Self-serve reduced professional services dependency</li>
+                </ul>
+                
+                <h3>Strategic Validation</h3>
+                
+                <div class="highlight-box">
+                    <p>
+                        <strong>The most important validation:</strong> Enterprise customers embraced the simpler approach. 
+                        The long-held belief that "enterprise = complexity" was disproved. Large organizations appreciated 
+                        faster deployment, easier training, and self-service capabilities just as much as SMBs.
+                    </p>
+                </div>
+                
+                <h3>Market Position</h3>
+                <ul>
+                    <li>Competitive with modern PLG players (Typeform, Wyng, Jebbit, DigiOH)</li>
+                    <li>Retained enterprise power with self-serve simplicity</li>
+                    <li>Opened SMB market while keeping enterprise customers</li>
+                    <li>Integration with Marigold stack created differentiated positioning</li>
+                    <li>Product value recognized through Zeta Global acquisition (2024)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+    <!-- What I Learned -->
+    <section class="section">
+        <div class="container">
+            <div class="content-section">
+                <h2>What I Learned</h2>
+                
+                <h3>1. Market Shifts Require Product Conviction</h3>
+                <p>
+                    Seeing the competitive landscape change (Typeform, Wyng, Jebbit, DigiOH gaining traction) wasn't enough. 
+                    I had to challenge internal assumptions about what enterprise customers wanted. This required conviction—backed 
+                    by customer conversations and market data—to drive transformation against the status quo.
+                </p>
+                
+                <h3>2. Complexity Doesn't Equal Enterprise Value</h3>
+                <p>
+                    The industry belief that enterprise products must be complex to be powerful was fundamentally wrong. 
+                    Enterprise customers appreciated simplicity, speed, and self-service as much as SMBs. The difference 
+                    wasn't complexity—it was scale, security, integration, and support.
+                </p>
+                
+                <h3>3. PLG Principles Apply at All Customer Scales</h3>
+                <p>
+                    Self-serve onboarding, progressive disclosure, contextual guidance, and activation metrics aren't just 
+                    for SMB products. Enterprise customers benefit from these principles too. The implementation might differ, 
+                    but the core PLG approach works across segments.
+                </p>
+                
+                <h3>4. Transformation Beats Incremental Improvement</h3>
+                <p>
+                    Small improvements to the legacy product wouldn't have achieved 50% churn reduction or 20% ARR growth. 
+                    The market required fundamental transformation—from services-led to self-serve, from expert-only to 
+                    accessible. Half measures would have meant slow decline.
+                </p>
+                
+                <h3>5. Product Strategy Requires End-to-End Ownership</h3>
+                <p>
+                    Leading discovery, strategy, development, enablement, and customer engagement gave me complete context. 
+                    I could see where the product was breaking down, what customers actually needed, and what the market 
+                    demanded. This comprehensive view was essential for successful transformation.
+                </p>
+                
+                <h3>6. Integration Creates Differentiation</h3>
+                <p>
+                    Grow's integration with Marigold's broader marketing stack (Engage, Engage+, Sailthru) created unique 
+                    value that standalone competitors couldn't match. Platform strategy—connecting products to create unified 
+                    customer journeys—opened new markets and revenue streams.
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Navigation to Other Work -->
+    <section class="section" style="border-top: 1px solid var(--border); padding-top: 4rem;">
+        <div class="container">
+            <div class="content-section">
+                <h3 style="text-align: center; margin-bottom: 2rem;">Explore More Work</h3>
+                <div class="cta-buttons" style="justify-content: center;">
+                    <a href="wpp-open.html" class="btn">WPP Open →</a>
+                    <a href="marginwhiz.html" class="btn">MarginWhiz →</a>
+                    <a href="rx-mercury.html" class="btn">RX Mercury →</a>
+                    <a href="/#work" class="btn btn-primary">← All Work</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div>© 2025 Rakesh Gupta. All rights reserved.</div>
+                <div class="footer-links">
+                    <a href="https://linkedin.com/in/rakeshgupta" target="_blank">LinkedIn</a>
+                    <a href="https://marginwhiz.com" target="_blank">MarginWhiz</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="../js/main.js"></script>
+</body>
+</html>
