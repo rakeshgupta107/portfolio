@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MarginWhiz - AI-Powered Pricing Platform | Rakesh Gupta</title>
+    <meta name="description" content="Built MarginWhiz from the ground up - an AI-powered margin optimization platform for SMB retailers. From childhood insight to live SaaS product.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="../css/style.css">
+    
+    <style>
+        /* Case Study Specific Styles */
+        .case-study-hero {
+            padding: 120px 0 60px;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .case-study-header {
+            max-width: 900px;
+        }
+        
+        .case-study-meta {
+            display: flex;
+            gap: 3rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .meta-item {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        
+        .meta-label {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-muted);
+        }
+        
+        .meta-value {
+            font-size: 1.1rem;
+            color: var(--text);
+            font-weight: 500;
+        }
+        
+        .case-study-title {
+            font-family: var(--font-display);
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.02em;
+        }
+        
+        .case-study-intro {
+            font-size: 1.3rem;
+            line-height: 1.6;
+            color: var(--text-muted);
+            max-width: 800px;
+            margin-bottom: 3rem;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            padding: 3rem;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            margin: 4rem 0;
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-family: var(--font-display);
+            font-size: 3rem;
+            color: var(--accent);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-description {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+        
+        .content-section {
+            max-width: 900px;
+            margin: 0 auto 4rem;
+        }
+        
+        .content-section h2 {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.01em;
+        }
+        
+        .content-section h3 {
+            font-size: 1.5rem;
+            margin: 2.5rem 0 1rem;
+            font-weight: 500;
+        }
+        
+        .content-section p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+        }
+        
+        .content-section ul {
+            list-style: none;
+            padding-left: 0;
+            margin: 1.5rem 0;
+        }
+        
+        .content-section li {
+            padding-left: 2rem;
+            margin-bottom: 1rem;
+            position: relative;
+            line-height: 1.7;
+            color: var(--text-muted);
+        }
+        
+        .content-section li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+        
+        .image-container {
+            margin: 3rem 0;
+            border: 1px solid var(--border);
+            overflow: hidden;
+        }
+        
+        .image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .image-caption {
+            padding: 1rem 1.5rem;
+            background: var(--card-bg);
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border);
+        }
+        
+        .highlight-box {
+            background: var(--card-bg);
+            border-left: 3px solid var(--accent);
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .highlight-box p {
+            margin-bottom: 0;
+        }
+        
+        .philosophy-cards {
+            display: grid;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .philosophy-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            padding: 2rem;
+        }
+        
+        .philosophy-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+        
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            margin-bottom: 2rem;
+            transition: color 0.3s ease;
+        }
+        
+        .back-link:hover {
+            color: var(--accent);
+        }
+        
+        .product-links {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin: 2rem 0;
+        }
+        
+        .product-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            color: var(--text);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .product-link:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <a href="/" class="logo">Rakesh Gupta</a>
+            <ul>
+                <li><a href="/#work">Work</a></li>
+                <li><a href="/#expertise">Expertise</a></li>
+                <li><a href="/#testimonials">Testimonials</a></li>
+                <li><a href="/#thinking">Thinking</a></li>
+                <li><a href="/#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- Case Study Hero -->
+    <section class="case-study-hero">
+        <div class="container">
+            <a href="/#work" class="back-link">← Back to Work</a>
+            
+            <div class="case-study-header">
+                <div class="case-study-meta">
+                    <div class="meta-item">
+                        <span class="meta-label">Project Type</span>
+                        <span class="meta-value">Personal SaaS</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Role</span>
+                        <span class="meta-value">Solo Founder</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Timeline</span>
+                        <span class="meta-value">2025</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Focus</span>
+                        <span class="meta-value">AI · Pricing · UX</span>
+                    </div>
+                </div>
+                
+                <h1 class="case-study-title">MarginWhiz: Building AI-Powered Pricing from Childhood Insight to Live Product</h1>
+                
+                <p class="case-study-intro">
+                    Built and shipped MarginWhiz as a solo founder—an AI-powered margin optimization platform for 
+                    SMB retailers. From recognizing the problem in my uncle's general store to validating it at 
+                    enterprise OTA scale to building a live SaaS product with a UX-first philosophy.
+                </p>
+                
+                <div class="product-links">
+                    <a href="https://marginwhiz.com" target="_blank" class="product-link">🌐 Visit Website</a>
+                    <a href="https://app.marginwhiz.com" target="_blank" class="product-link">📊 Try Live App</a>
+                    <a href="https://marginwhiz.com/trial" target="_blank" class="product-link">🎯 Interactive Trial</a>
+                    <a href="https://ai.marginwhiz.com/docs" target="_blank" class="product-link">🔧 API Docs</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Impact Stats -->
+    <section class="section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number">Solo</span>
+                    <span class="stat-description">Built end-to-end</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">Live</span>
+                    <span class="stat-description">Working SaaS product</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">3 AI</span>
+                    <span class="stat-description">Recommendation engines</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">5 Min</span>
+                    <span class="stat-description">Upload to recommendations</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- The Origin Story -->
+    <section class="section">
+        <div class="container">
+            <div class="content-section">
+                <h2>The Problem Started in a General Store</h2>
+                
+                <p>
+                    Growing up, I watched my uncle run a retail shop selling everything from groceries to clothing. 
+                    He had an intuitive sense for pricing: some products could bear higher margins, others needed to 
+                    stay competitive. <strong>The red shirts might work at 18% margin while blue ones needed 15%</strong>—even 
+                    though they were similar products.
+                </p>
+                
+                <p>
+                    He understood something fundamental: <strong>the optimal margin varies by product attributes.</strong> 
+                    Finding that sweet spot for each variation was constant manual work.
+                </p>
+                
+                <div class="highlight-box">
+                    <p>
+                        <strong>Decades later, I saw the same challenge at enterprise scale.</strong> Working in travel 
+                        ecommerce, teams used blanket 12% margins across all hotels—ignoring obvious differences by destination, 
+                        hotel type, or booking channel. They were missing the granular optimization my uncle had exploited in 
+                        his small store, but at a scale that made manual optimization impossible.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- The Challenge -->
+    <section class="section">
+        <div class="container">
+            <div class="content-section">
+                <h2>The Challenge</h2>
+                
+                <p>
+                    Most retailers use blanket margin percentages—12% across all products—because finding optimal margins 
+                    for each product variation manually doesn't scale. But optimal margins differ by color, category, size, 
+                    season, and channel. Using blanket rates means leaving significant profit on the table.
+                </p>
+                
+                <h3>Why Manual Optimization Fails</h3>
+                
+                <ul>
+                    <li><strong>Too many combinations:</strong> Even a small catalog has hundreds of attribute combinations to optimize</li>
+                    <li><strong>Constantly changing:</strong> Costs fluctuate, seasons shift, competition evolves</li>
+                    <li><strong>Requires analysis:</strong> Finding optima needs data analysis most SMBs don't have time for</li>
+                    <li><strong>No clear process:</strong> Teams rely on gut feel and periodic reviews, not systematic optimization</li>
+                </ul>
+                
+                <p>
+                    I validated this problem at enterprise scale by building a pricing rules engine at my previous OTA company. 
+                    It let teams set granular margin adjustments (+2% for affiliates, -0.5% for all-inclusive bookings) and 
+                    consistently outperformed blanket rates. <strong>This proved the concept: attribute-based margin optimization works.</strong>
+                </p>
+                
+                <p>
+                    But that rules engine still required manual analysis to find the right adjustments. The question became: 
+                    <strong>could AI systematically find these optima?</strong>
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Design Philosophy -->
+    <section class="section">
+        <div class="container">
+            <div class="content-section">
+                <h2>Design Philosophy: UX Over Features</h2>
+                
+                <p>
+                    Before building MarginWhiz, I had a critical realization from my work at WPP. Despite massive AI investment, 
+                    adoption stalled because tools weren't seamlessly integrated into workflows. I learned a fundamental truth:
+                </p>
+                
+                <div class="highlight-box">
+                    <p>
+                        <strong>Seamless UX matters more than AI sophistication.</strong> The most powerful AI becomes a white 
+                        elephant if users don't adopt it. No adoption = no value.
+                    </p>
+                </div>
+                
+                <p>
+                    For MarginWhiz, this meant designing for SMB retailers who:
+                </p>
+                
+                <ul>
+                    <li>Don't have data science teams or technical resources</li>
+                    <li>Don't have time to learn complex tools or attend training</li>
+                    <li>Need results in minutes, not days or weeks</li>
+                    <li>Work with whatever data they already have (messy CSVs, spreadsheets)</li>
+                </ul>
+                
+                <h3>The UX Priorities</h3>
+                
+                <div class="philosophy-cards">
+                    <div class="philosophy-card">
+                        <div class="philosophy-title">1. Simplicity: 3 Steps, 5 Minutes</div>
+                        <p style="color: var(--text-muted); margin: 0;">
+                            Upload CSV → Get AI recommendations → Export results. No integrations, no setup, 
+                            no configuration. Works immediately.
+                        </p>
+                    </div>
+                    
+                    <div class="philosophy-card">
+                        <div class="philosophy-title">2. Intelligent Defaults Over Manual Config</div>
+                        <p style="color: var(--text-muted); margin: 0;">
+                            Automatic data mapping, smart attribute detection, pre-configured optimization cycles. 
+                            Users shouldn't need to understand the AI to benefit from it.
+                        </p>
+                    </div>
+                    
+                    <div class="philosophy-card">
+                        <div class="philosophy-title">3. Plain English, Not Technical Jargon</div>
+                        <p style="color: var(--text-muted); margin: 0;">
+                            "Increase Category: Formal by 0.41 points" instead of "Apply gradient adjustment to 
+                            categorical variable." Recommendations must be immediately actionable.
+                        </p>
+                    </div>
+                    
+                    <div class="philosophy-card">
+                        <div class="philosophy-title">4. Works With Existing Data</div>
+                        <p style="color: var(--text-muted); margin: 0;">
+                            No special formats, no database integrations. If they have sales data in a spreadsheet, 
+                            they can use MarginWhiz.
+                        </p>
+                    </div>
+                </div>
+                
+                <p>
+                    <strong>This philosophy came from seeing powerful AI sit unused at WPP.</strong> Having the most 
+                    sophisticated algorithms means nothing if users don't adopt it. I chose to invest in removing friction, 
+                    even when it meant more technical complexity under the hood.
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- What I Built -->
+    <section class="section">
+        <div class="container">
+            <div class="content-section">
+                <h2>What I Built</h2>
+                
+                <p>
+                    Built MarginWhiz as a full-stack SaaS platform with AI-powered optimization at its core. The system 
+                    makes margin optimization accessible to SMB retailers through intelligent automation and dead-simple UX.
+                </p>
+                
+                <h3>The User Experience</h3>
+                
+                <div class="image-container">
+                    <img src="../images/marginwhiz-trial-home.png" alt="MarginWhiz Trial Experience">
+                    <div class="image-caption">
+                        Simple 3-step process: Upload data, view insights, get AI recommendations—designed for speed and clarity
+                    </div>
+                </div>
+                
+                <h3>1. Intelligent Data Ingestion</h3>
+                
+                <p>Users upload CSV files with sales data. The system:</p>
+                
+                <ul>
+                    <li><strong>Auto-detects data structure:</strong> Identifies product names, margins, sales volumes, attributes</li>
+                    <li><strong>Smart field mapping:</strong> Suggests column mappings based on content patterns</li>
+                    <li><strong>Handles messy data:</strong> Works with real-world spreadsheets, not just perfect datasets</li>
+                    <li><strong>Flexible attributes:</strong> Supports any product attributes (color, size, category, season, etc.)</li>
+                </ul>
+                
+                <div class="image-container">
+                    <img src="../images/marginwhiz-upload.png" alt="Data Upload and Mapping">
+                    <div class="image-caption">
+                        CSV upload with automatic field mapping and data preview—no manual configuration required
+                    </div>
+                </div>
+                
+                <h3>2. Product Insights & Attribution Analysis</h3>
+                
+                <p>Before optimization, the system analyzes product distribution and sales patterns:</p>
+                
+                <ul>
+                    <li>Visual breakdown of products by attribute values</li>
+                    <li>Sales distribution across categories</li>
+                    <li>Margin variation identification</li>
+                    <li>Attribute correlation analysis</li>
+                </ul>
+                
+                <div class="image-container">
+                    <img src="../images/marginwhiz-insights.png" alt="Product Insights Dashboard">
+                    <div class="image-caption">
+                        Product insights showing distribution across attributes—helps users understand their catalog before optimization
+                    </div>
+                </div>
+                
+                <h3>3. AI Optimization Engine</h3>
+                
+                <p>
+                    The core of MarginWhiz is three AI recommendation engines working together, exposed through 
+                    a separate API service (<a href="https://ai.marginwhiz.com/docs" target="_blank" style="color: var(--accent);">ai.marginwhiz.com/docs</a>):
+                </p>
+                
+                <ul>
+                    <li><strong>Attribute Impact Ranking:</strong> Identifies which product attributes (category, color, size, season) 
+                    most influence margin performance—prioritizing where to focus optimization efforts</li>
+                    <li><strong>Margin Optimization:</strong> Recommends optimal margin adjustments for each attribute value based on 
+                    sales patterns and retail pricing benchmarks</li>
+                    <li><strong>Next Action Guidance:</strong> Suggests whether to continue refining current attribute, move to next 
+                    priority attribute, or conclude optimization cycle</li>
+                </ul>
+                
+                <div class="image-container">
+                    <img src="../images/marginwhiz-optimize.png" alt="AI Optimization Recommendations">
+                    <div class="image-caption">
+                        AI-powered recommendations in plain English—"Increase Formal by 0.41 pts, Reduce Outdoor by 0.30 pts"
+                    </div>
+                </div>
+                
+                <h3>4. Technical Architecture</h3>
+                
+                <p><strong>Why API-first design:</strong></p>
+                
+                <ul>
+                    <li>AI engine can evolve independently from platform UX</li>
+                    <li>Enables iteration on recommendation algorithms without touching user-facing code</li>
+                    <li>Allows future integration of industry benchmark data and enhanced ML models</li>
+                    <li>Documented with Swagger for transparency and potential third-party use</li>
+                </ul>
+                
+                <p><strong>Multi-tenant SaaS architecture:</strong></p>
+                
+                <ul>
+                    <li>User authentication and project management</li>
+                    <li>Secure data isolation between users</li>
+                    <li>Scalable data processing pipeline</li>
+                    <li>Built with Next.js, Python AI services, modern cloud infrastructure</li>
+                </ul>
+                
+                <h3>5. Export & Application</h3>
+                
+                <p>
+                    Users can download recommended margin adjustments as CSV files and apply them directly in their 
+                    pricing or catalog systems. No vendor lock-in, no complex integrations—just actionable recommendations 
+                    they can use immediately.
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Current Status -->
+    <section class="section">
+        <div class="container">
+            <div class="content-section">
+                <h2>Current Status & Learning</h2>
+                
+                <p>
+                    <strong>Live product with early user testing.</strong> The trial experience validates the core optimization 
+                    workflow and UX approach. Current focus areas:
+                </p>
+                
+                <ul>
+                    <li><strong>Data expansion:</strong> Incorporating broader retail pricing datasets to enhance recommendation accuracy</li>
+                    <li><strong>Recommendation refinement:</strong> Tuning AI engines based on early user feedback and real optimization results</li>
+                    <li><strong>Use case validation:</strong> Testing with retailers, marketplace sellers, and hospitality businesses to identify highest-value segments</li>
+                    <li><strong>UX iteration:</strong> Continuously simplifying based on user behavior and friction points</li>
+                </ul>
+                
+                <p>
+                    The product demonstrates the complete vision—from data upload to AI recommendations to export—and 
+                    proves the technical feasibility and user experience approach.
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- What I Learned -->
+    <section class="section">
+        <div class="container">
+            <div class="content-section">
+                <h2>What I Learned</h2>
+                
+                <h3>1. UX Determines Value, Not Technical Sophistication</h3>
+                <p>
+                    The gap between 'working AI' and 'adopted AI' is user experience. I learned this at WPP watching 
+                    powerful AI go unused, and applied it to MarginWhiz: every feature decision starts with "will SMB 
+                    owners actually use this?" Simplicity requires more technical work than complexity, but it's the 
+                    only path to adoption.
+                </p>
+                
+                <h3>2. Solo Shipping Forces Ruthless Prioritization</h3>
+                <p>
+                    Building alone means choosing what NOT to build is more important than choosing what to build. I 
+                    prioritized API-first architecture and intelligent data mapping over UI polish and advanced features. 
+                    Getting the foundation right—simple UX, working AI, clean export—mattered more than sophisticated 
+                    dashboards or analytics.
+                </p>
+                
+                <h3>3. Domain Expertise Beats Generic AI Knowledge</h3>
+                <p>
+                    Understanding retail margin economics from childhood (my uncle's store) and validating it at enterprise 
+                    scale (OTA pricing) was more valuable than ML expertise. The product works because it solves a real 
+                    problem I deeply understand, not because of algorithmic sophistication.
+                </p>
+                
+                <h3>4. AI Products Need Explainability to Build Trust</h3>
+                <p>
+                    Users won't trust black-box recommendations, especially for pricing decisions that directly impact revenue. 
+                    Plain English explanations ("Formal items show neutral margins, increase by 0.41 pts") and showing the 
+                    reasoning (attribute impact ranking, sales patterns) build confidence and adoption.
+                </p>
+                
+                <h3>5. Data Strategy Matters as Much as Algorithm Design</h3>
+                <p>
+                    Building AI products requires constant focus on data: how to ingest it easily, how to handle messy 
+                    real-world data, how to expand training datasets, how to validate recommendations against ground truth. 
+                    The algorithm is only as good as the data it works with—and getting good data from SMBs requires making 
+                    it effortless.
+                </p>
+                
+                <h3>6. Product-Market Fit is Discovery, Not Assumption</h3>
+                <p>
+                    I built MarginWhiz assuming the problem I'd seen in travel ecommerce applied universally to retail. 
+                    Early user testing is revealing which segments (marketplace sellers vs. brick-and-mortar, fashion vs. 
+                    grocery) find the most value. This iterative discovery is teaching me more than any pre-launch analysis could.
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Navigation to Other Work -->
+    <section class="section" style="border-top: 1px solid var(--border); padding-top: 4rem;">
+        <div class="container">
+            <div class="content-section">
+                <h3 style="text-align: center; margin-bottom: 2rem;">Explore More Work</h3>
+                <div class="cta-buttons" style="justify-content: center;">
+                    <a href="wpp-open.html" class="btn">WPP Open →</a>
+                    <a href="/#work" class="btn btn-primary">← All Work</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div>© 2025 Rakesh Gupta. All rights reserved.</div>
+                <div class="footer-links">
+                    <a href="https://linkedin.com/in/rakeshgupta" target="_blank">LinkedIn</a>
+                    <a href="https://marginwhiz.com" target="_blank">MarginWhiz</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="../js/main.js"></script>
+</body>
+</html>
