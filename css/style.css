@@ -126,6 +126,12 @@ nav a:hover {
     animation: fadeInUp 1s ease-out;
 }
 
+.about-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+
 .hero-label {
     font-size: 0.9rem;
     text-transform: uppercase;
@@ -188,6 +194,19 @@ nav a:hover {
     display: flex;
     gap: 1.5rem;
     flex-wrap: wrap;
+}
+/* About section — match standard body copy */
+.about p,
+.about li {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: var(--text-muted);
+    max-width: 760px;
+}
+
+.about ul {
+    margin-left: 2rem;
+    margin-top: 0.75rem;
 }
 
 .btn {

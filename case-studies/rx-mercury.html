@@ -224,8 +224,8 @@
                         <span class="meta-value">RX Global</span>
                     </div>
                     <div class="meta-item">
-                        <span class="meta-label">Role</span>
-                        <span class="meta-value">Product Lead</span>
+                        <span class="meta-label">Platform</span>
+                        <span class="meta-value">Mercury</span>
                     </div>
                     <div class="meta-item">
                         <span class="meta-label">Timeline</span>
@@ -233,16 +233,16 @@
                     </div>
                     <div class="meta-item">
                         <span class="meta-label">Focus</span>
-                        <span class="meta-value">Platform · Scale</span>
+                        <span class="meta-value">Platform · Workflows · Integrations</span>
                     </div>
                 </div>
                 
-                <h1 class="case-study-title">Mercury: Building a Unified Platform for 400+ Global Events</h1>
+                <h1 class="case-study-title">Mercury: A Unified Platform for Registration, Commerce, and Onsite Operations</h1>
                 
                 <p class="case-study-intro">
-                    Led the build of Mercury, RX Global's unified event platform—consolidating registration, ecommerce, 
-                    badging, access control, and customer service into one integrated system. Now powering hundreds of events 
-                    attended by millions worldwide.
+                    Mercury is RX Global’s core platform for registration, ecommerce, access control, and on-site operations across
+                    large-scale events worldwide. I led product definition and system design to consolidate a fragmented vendor landscape
+                    into a single, integrated platform supporting complex, revenue-critical workflows.
                 </p>
             </div>
         </div>
@@ -252,22 +252,22 @@
     <section class="section">
         <div class="container">
             <div class="stats-grid">
-                <div class="stat-item">
-                    <span class="stat-number">400+</span>
-                    <span class="stat-description">Events powered globally</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">Millions</span>
-                    <span class="stat-description">Annual attendees</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">15+</span>
-                    <span class="stat-description">Regions worldwide</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">5</span>
-                    <span class="stat-description">Core platform modules</span>
-                </div>
+<div class="stat-item">
+    <span class="stat-number">Critical</span>
+    <span class="stat-description">Time-sensitive event workflows</span>
+</div>
+<div class="stat-item">
+    <span class="stat-number">Unified</span>
+    <span class="stat-description">Single attendee data model</span>
+</div>
+<div class="stat-item">
+    <span class="stat-number">Reusable</span>
+    <span class="stat-description">Config-driven event setups</span>
+</div>
+<div class="stat-item">
+    <span class="stat-number">Resilient</span>
+    <span class="stat-description">Onsite + offline operation</span>
+</div>
             </div>
         </div>
     </section>
@@ -276,38 +276,31 @@
     <section class="section">
         <div class="container">
             <div class="content-section">
-                <h2>The Challenge</h2>
-                
-                <p>
-                    RX Global (formerly Reed Exhibitions) produces over 400 events annually across 15+ regions—from small 
-                    trade shows to massive exhibitions with hundreds of thousands of attendees. Each event required registration, 
-                    badging, access control, exhibitor commerce, and customer support.
-                </p>
-                
-                <p>
-                    The existing approach relied on <strong>fragmented third-party tools</strong> cobbled together differently 
-                    for each event. Registration might use one vendor, badging another, ecommerce a third. This created:
-                </p>
-                
+                <h2>Context & problem</h2>
                 <ul>
-                    <li><strong>Inconsistent attendee experience:</strong> Different registration flows, unclear processes, frequent handoffs</li>
-                    <li><strong>Operational complexity:</strong> Event teams managing multiple vendors, duplicate data entry, manual reconciliation</li>
-                    <li><strong>Limited visibility:</strong> No unified view of attendees, purchases, or event performance</li>
-                    <li><strong>Integration nightmares:</strong> Each tool had its own data model, API, and support process</li>
-                    <li><strong>Scaling issues:</strong> Adding new events meant procurement, setup, training across multiple systems</li>
+                    <li>Core event workflows were split across multiple vendors and tools, creating inconsistent data and duplicated effort</li>
+                    <li>Operational teams needed predictable behaviour during high-traffic, time-critical onsite periods</li>
+                    <li>Fragmentation limited reuse across 400+ events and increased operational risk</li>
+                    <li>The platform had to support varied event configurations without becoming fragile or bespoke</li>
                 </ul>
-                
-                <div class="highlight-box">
-                    <p>
-                        <strong>The opportunity:</strong> Build a unified platform that brought registration, ecommerce, badging, 
-                        access control, and customer service into one integrated system—streamlining operations and improving 
-                        experience for both attendees and event teams.
-                    </p>
-                </div>
             </div>
-        </div>
-    </section>
-    
+            <div class="content-section">
+                <h2>Constraints & realities (what this required)</h2>
+                <ul>
+                    <li><strong>Reliability under pressure:</strong> onsite operations need predictable behaviour and fast recovery paths</li>
+                    <li><strong>Configuration complexity:</strong> events vary widely; workflows must be flexible without becoming bespoke</li>
+                    <li><strong>Integration surface:</strong> payments, access hardware, comms, and third-party services need clean interfaces</li>
+                    <li><strong>Failure modes:</strong> graceful degradation is a feature, not an edge case</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>System design & approach</h2>
+                <p>
+                    Mercury consolidated critical event capabilities into a shared platform with reusable services and configuration-driven workflows.
+                    The goal was operational reliability first: consistent data, predictable behaviour under load, and clear failure handling across the event lifecycle.
+                </p>
+            </div>    
     <!-- Platform Overview -->
     <section class="section">
         <div class="container">
@@ -316,7 +309,7 @@
                 
                 <p>
                     Mercury was designed as an integrated platform with five core modules, each addressing a critical part 
-                    of the event lifecycle:
+                    of the event lifecycle.
                 </p>
                 
                 <div class="image-container">
@@ -336,300 +329,19 @@
         </div>
     </section>
     
-    <!-- Module 1: Registration -->
-    <section class="section">
-        <div class="container">
-            <div class="content-section">
-                <h3>1. Registration: Foundation of Every Event</h3>
-                
-                <p>
-                    Mercury allowed event teams to set up tailored registration flows, manage real-time attendee data, and 
-                    streamline onboarding across different event types and regions.
-                </p>
-                
-                <div class="image-container">
-                    <img src="../images/rx-registration.jpg" alt="Registration Flow">
-                    <div class="image-caption">
-                        Multi-step registration flow: Attendee details → Company information → Order summary with 
-                        real-time validation and progress tracking
-                    </div>
-                </div>
-                
-                <p><strong>Key capabilities:</strong></p>
-                
-                <ul>
-                    <li>Flexible form builder supporting various event types (conferences, trade shows, exhibitions)</li>
-                    <li>Multi-step flows with conditional logic based on attendee type or selections</li>
-                    <li>Real-time data validation and duplicate detection</li>
-                    <li>Support for individual, group, and corporate registrations</li>
-                    <li>Multi-language and multi-currency support for global events</li>
-                </ul>
-                
-                <div class="image-container">
-                    <img src="../images/rx-registration-flow.jpg" alt="Complete Registration Journey">
-                    <div class="image-caption">
-                        Complete registration journey from initial landing page through confirmation—designed for 
-                        conversion and clarity across all event types
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
     
-    <!-- Module 2: Badging -->
-    <section class="section">
-        <div class="container">
-            <div class="content-section">
-                <h3>2. Badging System: Automated & Flexible</h3>
-                
-                <p>
-                    Event teams could manage badge designs, layouts, and printing rules centrally. Badges were automatically 
-                    issued on confirmation or at check-in, reducing manual steps and errors.
-                </p>
-                
-                <div class="image-container">
-                    <img src="../images/rx-badging.jpg" alt="Badge Generation">
-                    <div class="image-caption">
-                        Automated badge generation from registration confirmation to physical badge with QR code 
-                        for access control and tracking
-                    </div>
-                </div>
-                
-                <p><strong>Features:</strong></p>
-                
+           <div class="content-section">
+                <h2>Outcomes</h2>
                 <ul>
-                    <li>Template-based badge design system with drag-and-drop layout</li>
-                    <li>Dynamic content (name, company, badge type, QR codes) populated from registration</li>
-                    <li>Print queue management for on-site badge production</li>
-                    <li>Pre-printed badge options with variable data for VIPs and exhibitors</li>
-                    <li>Integrated with access control via unique QR codes and identifiers</li>
+                    <li>Replaced a fragmented vendor landscape with a unified platform supporting registration, commerce, and onsite operations</li>
+                    <li>Improved operational reliability for high-traffic, time-critical event scenarios</li>
+                    <li>Enabled reuse of core capabilities across hundreds of events with configuration-driven workflows</li>
+                    <li>Created a consistent data foundation for reporting, support, and downstream integrations</li>
                 </ul>
             </div>
-        </div>
-    </section>
-    
-    <!-- Module 3: Access Control -->
-    <section class="section">
-        <div class="container">
-            <div class="content-section">
-                <h3>3. Access Control & Onsite Operations</h3>
-                
-                <p>
-                    Tightly linked with registration and badging, access control allowed organizers to define entry rules 
-                    by attendee type or badge scan, with real-time insights into venue capacity and zone access.
-                </p>
-                
-                <div class="image-container">
-                    <img src="../images/rx-onsite-access.jpg" alt="Access Control Flow">
-                    <div class="image-caption">
-                        Onsite access control: Handheld scanner → Badge validation → Entry confirmation with 
-                        real-time verification against attendee permissions
-                    </div>
-                </div>
-                
-                <p><strong>Onsite capabilities:</strong></p>
-                
-                <ul>
-                    <li>Mobile scanning apps for fast check-in at entrances and session rooms</li>
-                    <li>Zone-based access rules (main show floor, VIP lounges, conference sessions)</li>
-                    <li>Real-time attendance tracking and capacity monitoring</li>
-                    <li>Offline mode for reliable operation even with connectivity issues</li>
-                </ul>
-                
-                <div class="image-container">
-                    <img src="../images/rx-onsite-insights.jpg" alt="Registration Manager Insights">
-                    <div class="image-caption">
-                        Registration manager dashboard showing real-time performance statistics: registrations by day, 
-                        attendance patterns, and badge type breakdowns—enabling data-driven event management
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Module 4: Exhibitor eCommerce -->
-    <section class="section">
-        <div class="container">
-            <div class="content-section">
-                <h3>4. Exhibitor eCommerce: Self-Service Platform</h3>
-                
-                <p>
-                    Exhibitors could browse services, book packages, manage logistics, and track payments—all within one 
-                    intuitive interface. This shifted the exhibitor experience from phone calls and spreadsheets to 
-                    modern self-service.
-                </p>
-                
-                <div class="image-container">
-                    <img src="../images/rx-ecommerce.jpg" alt="Exhibitor eCommerce Platform">
-                    <div class="image-caption">
-                        Exhibitor dashboard (left) and package selection (right)—from company profile management to 
-                        stand selection, exhibitors control their event presence
-                    </div>
-                </div>
-                
-                <p><strong>Exhibitor capabilities:</strong></p>
-                
-                <ul>
-                    <li>Package browsing and comparison (stand sizes, locations, included services)</li>
-                    <li>Add-on services (power, WiFi, furniture, catering, marketing opportunities)</li>
-                    <li>Stand location selection with interactive floor plans</li>
-                    <li>Company profile management (logo, description, products, staff)</li>
-                    <li>Payment tracking and invoice management</li>
-                </ul>
-                
-                <div class="image-container">
-                    <img src="../images/rx-ecommerce-flow.jpg" alt="Exhibitor Purchase Flow">
-                    <div class="image-caption">
-                        Complete exhibitor purchase flow: Package selection → Review and checkout → Order confirmation 
-                        → Automated email confirmation—streamlining what was previously a manual, multi-week process
-                    </div>
-                </div>
-                
-                <p>
-                    Every service booked flowed directly into the platform, with order history, item breakdowns, and 
-                    payment confirmation instantly available to both exhibitors and event operations teams.
-                </p>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Module 5: Customer Services -->
-    <section class="section">
-        <div class="container">
-            <div class="content-section">
-                <h3>5. Customer Services: Unified Support View</h3>
-                
-                <p>
-                    Support teams gained visibility into each attendee's complete journey—registrations, purchases, 
-                    badge status, and onsite interactions. This meant fewer handoffs and faster resolution.
-                </p>
-                
-                <div class="image-container">
-                    <img src="../images/rx-onsite-services.jpg" alt="Customer Service Interface">
-                    <div class="image-caption">
-                        Customer service search and detail views—staff can quickly look up any attendee and see their 
-                        complete event history, enabling fast, accurate support onsite or remotely
-                    </div>
-                </div>
-                
-                <p><strong>Support capabilities:</strong></p>
-                
-                <ul>
-                    <li>Unified attendee search across all events and registration types</li>
-                    <li>Complete history view: registrations, purchases, badge prints, access scans</li>
-                    <li>Quick actions: resend confirmations, reprint badges, update details</li>
-                    <li>Issue tracking and resolution workflows</li>
-                    <li>Especially valuable onsite where speed and accuracy matter most</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Automated Communications -->
-    <section class="section">
-        <div class="container">
-            <div class="content-section">
-                <h3>Automated Communications Throughout</h3>
-                
-                <p>
-                    Confirmation emails were triggered at each key step—registration completion, order placement, badge 
-                    issuance, payment confirmation. This improved clarity, reduced support queries, and helped attendees 
-                    feel in control of their journey.
-                </p>
-                
-                <p>
-                    Email templates were customizable per event while maintaining consistent branding and information 
-                    architecture across all communications.
-                </p>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Impact & Results -->
-    <section class="section">
-        <div class="container">
-            <div class="content-section">
-                <h2>Impact & Results</h2>
-                
-                <h3>Operational Transformation</h3>
-                <ul>
-                    <li><strong>Unified platform:</strong> Replaced dozens of fragmented third-party tools with single integrated system</li>
-                    <li><strong>Faster event setup:</strong> New events launched in weeks instead of months</li>
-                    <li><strong>Reduced manual work:</strong> Automated badging, confirmation emails, access control eliminated repetitive tasks</li>
-                    <li><strong>Better data quality:</strong> Single source of truth for attendee data eliminated sync issues and duplicates</li>
-                </ul>
-                
-                <h3>Improved Experiences</h3>
-                <ul>
-                    <li><strong>Attendees:</strong> Clear registration flows, instant confirmations, smooth onsite check-in</li>
-                    <li><strong>Exhibitors:</strong> Self-service booking, real-time visibility into orders and logistics</li>
-                    <li><strong>Event staff:</strong> Unified tools, consolidated reporting, faster support resolution</li>
-                    <li><strong>Event managers:</strong> Real-time insights into registrations, attendance, and revenue</li>
-                </ul>
-                
-                <h3>Scale Achieved</h3>
-                <ul>
-                    <li>Platform now powers <strong>400+ events annually</strong> across 15+ global regions</li>
-                    <li>Handles events ranging from 100 attendees to 100,000+ attendees</li>
-                    <li>Supports multiple event formats: conferences, trade shows, exhibitions, hybrid events</li>
-                    <li>Millions of registrations, badges, and transactions processed annually</li>
-                </ul>
-                
-                <div class="highlight-box" style="margin-top: 2rem;">
-                    <p>
-                        <strong>What colleagues said:</strong> "Rakesh has that rare combination of strategic product thinking 
-                        and hands-on execution. He can see the big picture while getting into the details that make products 
-                        actually work." — Patrick Mawhood, Senior Product Director, RX Global
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- What I Learned -->
-    <section class="section">
-        <div class="container">
-            <div class="content-section">
-                <h2>What I Learned</h2>
-                
-                <h3>1. Platform Products Require Different Thinking Than Features</h3>
-                <p>
-                    Building Mercury wasn't about delivering features—it was about creating infrastructure that would scale 
-                    across hundreds of use cases. Every decision had to consider: Will this work for a 200-person conference 
-                    AND a 100,000-person exhibition? This required different prioritization and design thinking.
-                </p>
-                
-                <h3>2. Integration is Product Strategy, Not Technical Detail</h3>
-                <p>
-                    The real value of Mercury wasn't individual modules—it was how they worked together. A registration flowing 
-                    seamlessly to badging to access control to support. The connections between modules mattered more than any 
-                    single feature. This shaped how we designed APIs, data models, and user workflows.
-                </p>
-                
-                <h3>3. Replacing Existing Tools is Harder Than Building New Ones</h3>
-                <p>
-                    Event teams had years of muscle memory with their existing (fragmented) tools. Mercury had to be clearly 
-                    better AND easy to migrate to. We couldn't just match existing functionality—we had to deliver enough 
-                    additional value to justify the switching cost.
-                </p>
-                
-                <h3>4. Global Scale Reveals Assumptions</h3>
-                <p>
-                    What worked for UK events didn't always work in Asia, Latin America, or Middle East. Time zones, currencies, 
-                    languages, payment methods, cultural expectations—all had to be considered. Building for global scale from 
-                    the start (not bolting it on later) was essential.
-                </p>
-                
-                <h3>5. Onsite Performance is Non-Negotiable</h3>
-                <p>
-                    When 5,000 people arrive at an exhibition at 8am, the system HAS to work. No "try again later," no graceful 
-                    degradation. This drove our approach to reliability, offline capabilities, and load testing. Event day is 
-                    when platform investments pay off or fail publicly.
-                </p>
-            </div>
-        </div>
-    </section>
-    
+
+
+
     <!-- Navigation to Other Work -->
     <section class="section" style="border-top: 1px solid var(--border); padding-top: 4rem;">
         <div class="container">

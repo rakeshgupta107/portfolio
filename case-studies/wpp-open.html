@@ -242,8 +242,8 @@
                         <span class="meta-value">WPP</span>
                     </div>
                     <div class="meta-item">
-                        <span class="meta-label">Role</span>
-                        <span class="meta-value">Senior Product Lead</span>
+                        <span class="meta-label">Platform</span>
+                        <span class="meta-value">Open</span>
                     </div>
                     <div class="meta-item">
                         <span class="meta-label">Timeline</span>
@@ -251,16 +251,16 @@
                     </div>
                     <div class="meta-item">
                         <span class="meta-label">Focus</span>
-                        <span class="meta-value">AI Platform · Enterprise UX</span>
+                        <span class="meta-value">Workflows · Platform · Applied AI</span>
                     </div>
                 </div>
                 
-                <h1 class="case-study-title">WPP Open: Defining Platform & UX Strategy for an AI-Powered Marketing OS</h1>
+                <h1 class="case-study-title">WPP Open: Shipping Applied AI Workflows on a Global Platform</h1>
                 
                 <p class="case-study-intro">
-                    Shaped platform and UX strategy for WPP Open, driving adoption of AI agents, role-based experiences, 
-                    and unified access across global marketing agencies. Focused on making an existing platform more 
-                    contextual, personalized, and accessible to 100,000+ users.
+                    Worked on WPP Open, the internal platform used across WPP agencies.
+                    My focus was enabling AI-assisted workflows in ways that were usable and trustworthy in day-to-day work—
+                    with clear guardrails, permissions, and predictable behaviour in production.
                 </p>
             </div>
         </div>
@@ -270,368 +270,91 @@
     <section class="section">
         <div class="container">
             <div class="stats-grid">
-                <div class="stat-item">
-                    <span class="stat-number">100k+</span>
-                    <span class="stat-description">Users targeted for adoption</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">Strategy</span>
-                    <span class="stat-description">Platform & UX direction</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">Context</span>
-                    <span class="stat-description">Personalization model</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">6 Months</span>
-                    <span class="stat-description">Strategy to adoption</span>
-                </div>
+<div class="stat-item">
+    <span class="stat-number">Workflow</span>
+    <span class="stat-description">AI-assisted task execution</span>
+</div>
+<div class="stat-item">
+    <span class="stat-number">Context</span>
+    <span class="stat-description">Role & permission aware</span>
+</div>
+<div class="stat-item">
+    <span class="stat-number">Guardrails</span>
+    <span class="stat-description">Reviewable AI outputs</span>
+</div>
+<div class="stat-item">
+    <span class="stat-number">Platform</span>
+    <span class="stat-description">Multi-tool integration</span>
+</div>
+
             </div>
         </div>
     </section>
+ 
     
-    <!-- The Challenge -->
-    <section class="section">
-        <div class="container">
-            <div class="content-section">
-                <h2>The Challenge</h2>
-                
+                <div class="content-section">
+                <h2>Context</h2>
                 <p>
-                    WPP invests significantly in AI and technology innovation to support 100,000+ employees across 
-                    hundreds of global marketing agencies. WPP Open was launched as the unified platform to bring 
-                    together tools, data, and AI capabilities across the organization.
-                </p>
-                
-                <p>
-                    When I joined as Senior Product Lead, the platform was in an early stage with opportunities to 
-                    establish clearer product strategy and improve adoption across agencies.
-                </p>
-                
-                <div class="highlight-box">
-                    <p>
-                        <strong>My focus:</strong> Define platform and UX strategy to make WPP Open more contextual 
-                        and personalized for diverse agency roles—and drive adoption by aligning the platform with 
-                        actual user workflows.
-                    </p>
-                </div>
-                
-                <p><strong>Key opportunities I focused on:</strong></p>
-                
-                <ul>
-                    <li><strong>Product strategy definition:</strong> Establishing clear vision for how the platform should serve different roles and use cases</li>
-                    <li><strong>Context-aware experiences:</strong> Making AI and tools more relevant by connecting them to user role, client, and project context</li>
-                    <li><strong>User experience alignment:</strong> Designing experiences that matched how agency teams actually work</li>
-                    <li><strong>Adoption acceleration:</strong> Supporting agencies in understanding and using the platform effectively</li>
-                    <li><strong>Analytics consolidation:</strong> Bringing together insights from multiple sources into unified views</li>
-                    <li><strong>Access and onboarding:</strong> Streamlining how users get set up and gain access to relevant tools</li>
-                    <li><strong>Information architecture:</strong> Aligning workspace structure with how agencies, clients, and teams collaborate</li>
-                </ul>
-                
-                <p>
-                    The opportunity was to evolve the platform from a collection of tools into an integrated operating 
-                    system that understood each user's context and needs.
+                    WPP Open serves a wide range of agency teams and workflows, spanning multiple tools, permissions, and content types.
+                    Introducing AI into this environment is primarily a systems problem: context, access, workflow fit, and predictable failure behaviour
+                    matter as much as the model.
                 </p>
             </div>
-        </div>
-    </section>
+
+            <div class="content-section">
+                <h2>The problem</h2>
+                <ul>
+                    <li>AI assistance needed to fit real workflows, not demos</li>
+                    <li>Context and permissions had to be correct across tools and agency environments</li>
+                    <li>Outputs needed to be reviewable and controllable to drive trust and adoption</li>
+                    <li>Workflows required safe degradation when dependencies failed or context was incomplete</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Constraints & realities</h2>
+                <ul>
+                    <li><strong>Complex ecosystem:</strong> multiple services, tools, and data sources</li>
+                    <li><strong>Governance:</strong> access control, usage constraints, and auditability</li>
+                    <li><strong>Adoption risk:</strong> unpredictable behaviour kills trust quickly</li>
+                    <li><strong>Operational fit:</strong> workflows must work under real-world time pressure</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>System design & approach</h2>
+                <ul>
+                    <li>Designed workflow patterns for AI assistance that made review and control explicit</li>
+                    <li>Focused on context propagation and permission boundaries across tools and services</li>
+                    <li>Worked with engineering on system boundaries, failure modes, and safe defaults</li>
+                    <li>Defined what “good” looked like in production: predictability, clarity, and operability</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Use of AI (applied, bounded)</h2>
+                <p>
+                    AI was treated as an assistive capability within broader workflows, supported by clear guardrails and review mechanisms.
+                </p>
+                <ul>
+                    <li><strong>What AI did:</strong> accelerate common tasks and decision support within defined workflow steps</li>
+                    <li><strong>What AI did not do:</strong> take autonomous actions without user review</li>
+                    <li><strong>How it stayed safe:</strong> permissions, context controls, and predictable fallbacks</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Outcomes & what I learned</h2>
+                <ul>
+                    <li>Improved the viability of AI-assisted workflows by treating trust and operability as first-class requirements</li>
+                    <li>Clarified system boundaries and governance needs for scaling AI across multiple agency environments</li>
+                    <li>Reinforced that adoption comes from predictable behaviour and workflow fit—not model novelty</li>
+                </ul>
+            </div>
+
+
     
-    <!-- My Approach -->
-    <section class="section">
-        <div class="container">
-            <div class="content-section">
-                <h2>My Approach</h2>
-                
-                <p>
-                    I joined as Senior Product Lead to shape the platform and UX strategy for WPP Open. My focus was on 
-                    defining how the platform could become more contextual and personalized—understanding each user's role, 
-                    clients, and needs to deliver more relevant experiences.
-                </p>
-                
-                <h3>Strategic Insight: Context Drives Value</h3>
-                
-                <p>
-                    Through conversations with agencies and analysis of usage patterns, a key insight emerged: 
-                    <strong>the platform needed to understand context</strong> to be truly valuable.
-                </p>
-                
-                <ul>
-                    <li>A creative director working on beverage brands needs different tools and content than a data analyst supporting automotive clients</li>
-                    <li>An account manager at one agency has different workflows than a strategist at another</li>
-                    <li>Users working on specific clients should see relevant tools, data, and assets—not everything</li>
-                </ul>
-                
-                <p>
-                    This led to the "context pass-through" strategic framework: role, client, and location context 
-                    should flow seamlessly through every experience in the platform.
-                </p>
-                
-                <h3>Strategic Framework: Context Pass-Through</h3>
-                
-                <p>
-                    The core insight was simple but powerful: <strong>the platform should know who you are, what you're 
-                    working on, and what you need access to</strong>—and pass that context seamlessly to every tool and 
-                    AI agent you use.
-                </p>
-                
-                <div class="image-container">
-                    <img src="../images/wpp-strategy.png" alt="WPP Open Strategy - Context Pass-Through Model">
-                    <div class="image-caption">
-                        Context-aware personalization model: Role, Client, and Location context flows through to every experience
-                    </div>
-                </div>
-                
-                <p>
-                    This meant the platform needed to understand three key dimensions for every user:
-                </p>
-                
-                <ul>
-                    <li><strong>Role:</strong> Are you a strategist, creative director, data analyst, account manager?</li>
-                    <li><strong>Client context:</strong> Which clients and brands are you working with right now?</li>
-                    <li><strong>Location/agency:</strong> Which office, team, and projects are you assigned to?</li>
-                </ul>
-                
-                <h3>Platform Architecture: OS Core + Layers</h3>
-                
-                <p>
-                    I designed the platform as a series of integrated layers around a central "OS Core" that manages 
-                    identity, context, and access:
-                </p>
-                
-                <div class="image-container">
-                    <img src="../images/wpp-os-core.png" alt="WPP Open OS Core Architecture">
-                    <div class="image-caption">
-                        Platform architecture: Users, Workspaces, Apps, Files, Data, Analytics, and Platform services 
-                        all connected through the OS Core
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- What We Built -->
-    <section class="section">
-        <div class="container">
-            <div class="content-section">
-                <h2>What I Delivered</h2>
-                
-                <p>
-                    In 6 months, I defined platform and UX strategy to make WPP Open more contextual, personalized, 
-                    and aligned with agency workflows. Here's what I focused on:
-                </p>
-                
-                <h3>1. Platform & UX Strategy: Context-Aware Framework</h3>
-                
-                <p>
-                    Established the strategic direction for making WPP Open context-aware and personalized:
-                </p>
-                
-                <ul>
-                    <li>Created the "context pass-through" framework: role, client, and location context flowing through every experience</li>
-                    <li>Defined role-based personalization strategy for different agency roles and use cases</li>
-                    <li>Designed information architecture that better matched how agencies and clients collaborate</li>
-                    <li>Established product strategy approach including user research, journey mapping, and success metrics</li>
-                </ul>
-                
-                <h3>2. User Experience & Interface Strategy</h3>
-                
-                <p>
-                    Shaped the UX direction for delivering personalized experiences:
-                </p>
-                
-                <ul>
-                    <li>Designed role-based "cockpit" experiences tailored to strategists, creatives, and account managers</li>
-                    <li>Created framework for intelligent defaults based on user role and current projects</li>
-                    <li>Defined navigation and information hierarchy that adapted to user context</li>
-                </ul>
-                <h3>3. Access Control & Identity Strategy</h3>
-                
-                <p>
-                    Defined approach for systematic access management:
-                </p>
-                
-                <ul>
-                    <li>Created strategy for role-based access control tied to organizational structure</li>
-                    <li>Designed unified access approach across multiple WPP applications</li>
-                    <li>Defined permission framework based on client and project relationships</li>
-                </ul>
-                
-                <h3>4. AI Integration & Workflow Context Strategy</h3>
-                
-                <p>
-                    Shaped how AI capabilities could better support agency work (see detailed section above)
-                </p>
-                
-                <h3>5. Analytics Consolidation & Onboarding</h3>
-                
-                <p>
-                    Addressed key adoption barriers:
-                </p>
-                
-                <ul>
-                    <li>Created strategy for consolidating analytics from multiple sources into unified views</li>
-                    <li>Defined approach for streamlining workspace setup and onboarding processes</li>
-                    <li>Designed user journey improvements to reduce time-to-value</li>
-                </ul>
-                
-                <h3>6. Adoption & Enablement</h3>
-                
-                <p>
-                    Supported rollout and agency engagement:
-                </p>
-                
-                <ul>
-                    <li>Worked with agencies to understand needs and validate strategy direction</li>
-                    <li>Supported professional services teams with platform adoption approach</li>
-                    <li>Created feedback loops to refine and evolve the platform strategy</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Key Decisions -->
-    <section class="section">
-        <div class="container">
-            <div class="content-section">
-                <h2>Key Decisions & Trade-offs</h2>
-                
-                <div class="key-decisions">
-                    <div class="decision-card">
-                        <div class="decision-title">1. Rebuild Information Architecture from User Needs</div>
-                        <p>
-                            The existing hierarchical workspace structure was built around system logic, not how agencies 
-                            and clients actually work. I redesigned the IA to match real relationships: agencies work with 
-                            multiple clients, teams work across agencies, projects span brands within clients.
-                        </p>
-                        <p style="margin-top: 1rem; color: var(--accent);">
-                            <strong>Trade-off:</strong> Required rethinking data model vs. keeping existing structure. 
-                            We chose to fix it properly.
-                        </p>
-                    </div>
-                    
-                    <div class="decision-card">
-                        <div class="decision-title">2. Context Over Customization</div>
-                        <p>
-                            Rather than letting users configure their own dashboard (which nobody does), we built a 
-                            smart system that inferred what they needed based on role, projects, and behavior. This 
-                            reduced complexity and delivered value faster.
-                        </p>
-                        <p style="margin-top: 1rem; color: var(--accent);">
-                            <strong>Trade-off:</strong> Faster time-to-value vs. flexibility. We chose speed.
-                        </p>
-                    </div>
-                    
-                    <div class="decision-card">
-                        <div class="decision-title">3. Automate Onboarding, Not Just Workflows</div>
-                        <p>
-                            Months-long manual workspace setup was killing adoption. I prioritized automated onboarding 
-                            and provisioning over adding new features. Getting people productive in days instead of 
-                            months mattered more than another integration.
-                        </p>
-                        <p style="margin-top: 1rem; color: var(--accent);">
-                            <strong>Trade-off:</strong> Infrastructure work vs. visible features. We chose foundation.
-                        </p>
-                    </div>
-                    
-                    <div class="decision-card">
-                        <div class="decision-title">4. Product Strategy Before Engineering</div>
-                        <p>
-                            Slowed down feature development to establish proper product processes: user research, 
-                            journey mapping, strategy docs, success metrics. This created short-term friction but 
-                            ensured we were building the right things.
-                        </p>
-                        <p style="margin-top: 1rem; color: var(--accent);">
-                            <strong>Trade-off:</strong> Velocity vs. direction. We chose direction.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Impact & Results -->
-    <section class="section">
-        <div class="container">
-            <div class="content-section">
-                <h2>Impact & Results</h2>
-                
-                <h3>Strategic Contributions</h3>
-                <ul>
-                    <li>Defined <strong>platform and UX strategy</strong> that established direction for context-aware, personalized experiences</li>
-                    <li>Created <strong>"context pass-through" framework</strong> as architectural foundation for role-based personalization</li>
-                    <li>Shaped <strong>AI integration approach</strong> for connecting AI tools to user workflows and client context</li>
-                    <li>Established <strong>product strategy processes</strong> including user research and journey mapping</li>
-                </ul>
-                
-                <h3>Platform Evolution</h3>
-                <ul>
-                    <li>Designed <strong>information architecture improvements</strong> aligned with how agencies and clients collaborate</li>
-                    <li>Created strategy for <strong>role-based experiences</strong> tailored to different agency roles</li>
-                    <li>Defined approach for <strong>analytics consolidation and unified access</strong> across WPP tools</li>
-                </ul>
-                
-                <h3>Adoption & Collaboration</h3>
-                <ul>
-                    <li>Worked with <strong>agencies and professional services</strong> to validate strategy and support adoption</li>
-                    <li>Established <strong>feedback loops</strong> for continuous refinement of platform direction</li>
-                    <li>Contributed to <strong>foundations for platform evolution</strong> toward more contextual experiences</li>
-                </ul>
-                
-                <div class="highlight-box" style="margin-top: 2rem;">
-                    <p>
-                        <strong>Colleague feedback:</strong> "Rakesh defined the vision and strategy for contextual 
-                        experiences and laid the foundations for the platform to move to the next level. He drove the 
-                        vision for the platform and supported agency adoption, quickly understanding complex dynamics 
-                        and turning them into clear product strategies." — Colleagues at WPP
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- What I Learned -->
-    <section class="section">
-        <div class="container">
-            <div class="content-section">
-                <h2>What I Learned</h2>
-                
-                <h3>1. Context is What Makes AI Useful in Practice</h3>
-                <p>
-                    Generic AI tools have limited value for specialized work. The key learning: <strong>AI becomes 
-                    genuinely useful when it has access to the same context users have</strong>—their role, current 
-                    client, project brief, brand guidelines. This requires thoughtful integration, not just access 
-                    to an LLM.
-                </p>
-                
-                <h3>2. Information Architecture Shapes Everything Else</h3>
-                <p>
-                    How you model relationships in a platform (agencies, clients, projects, teams) isn't just a 
-                    structural decision—it determines what's possible for personalization, access control, and 
-                    context-aware features. Getting the IA right early unlocks future capabilities.
-                </p>
-                
-                <h3>3. Platform Adoption Requires Solving Real Workflow Problems</h3>
-                <p>
-                    Users adopt platforms that make their jobs easier. This means understanding actual workflows, 
-                    pain points, and how people collaborate—then building solutions that fit naturally into their 
-                    work, not asking them to change how they work to fit the platform.
-                </p>
-                
-                <h3>4. Role-Based Personalization Needs to Be Systematic</h3>
-                <p>
-                    Creating different experiences for different roles requires systematic thinking about identity, 
-                    permissions, and context management. It's infrastructure work that enables personalization at 
-                    scale, not something that can be added surface-level.
-                </p>
-                
-                <h3>5. Strategy and Execution Must Work Together</h3>
-                <p>
-                    Defining strategy is valuable, but it must connect to execution. The most effective approach 
-                    was working closely with agencies, professional services, and implementation teams to ensure 
-                    the strategy could actually be realized and adopted.
-                </p>
-            </div>
-        </div>
-    </section>
+ 
     
     <!-- Navigation to Other Work -->
     <section class="section" style="border-top: 1px solid var(--border); padding-top: 4rem;">
